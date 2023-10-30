@@ -1,6 +1,6 @@
 ---
 - name: Remove externally managed from Debian 12
-  ansible.builtin.import_tasks: debian12.yml
+  import_tasks: debian12.yml
   when:
     - ansible_distribution == "Debian"
     - ansible_distribution_major_version|int >= 12
